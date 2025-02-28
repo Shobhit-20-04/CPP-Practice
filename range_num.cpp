@@ -7,10 +7,23 @@ int main()
     cin >> start;
     cout << "Enter end number: ";
     cin >> stop;
-    while (start <= stop)
+    if (start < stop)
     {
-        cout << start << " ";
-        start++;
+        while (start <= stop)
+        {
+            cout << start << " ";
+            start++;
+        }
     }
+    else if (stop < start)
+    {
+        while (start >= stop)
+        {
+            cout << start << " ";
+            start--;
+        }
+    }
+    else
+        cout << start;
     return 0;
 }
